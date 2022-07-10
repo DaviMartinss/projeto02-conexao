@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Usuário</title>
+  </head>
+  <body>
+    <form action="" method="post">
+
+      <h1>Only Chat - Cadastro</h1>
+      <div class="formulario">
+        <div class="input">
+          <label for="perfil" class="perfil2">
+            <i class="material-icons perfil">person</i>
+          </label>
+          <input type="file" name="perfil" id="perfil" />
+        </div>
+        <div class="input">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="username" #username
+            placeholder="Username"
+          />
+        </div>
+
+        <div class="input">
+          <label for="userEmail">Email</label>
+          <input
+            type="text"
+            name="email"
+            id="userEmail" #userEmail
+            placeholder="Username"
+          />
+        </div>
+
+        <div class="input">
+          <label for="Genero"> Gênero </label>
+          <select name="Genero" id="Genero" #Genero>
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+          </select>
+        </div>
+        <div class="input">
+          <label for="password">Senha</label>
+          <input
+            type="password"
+            name="password"
+            id="password" #password
+            placeholder="Senha"
+          />
+        </div>
+        <div class="input">
+          <label for="password2">Confirmar Senha</label>
+          <input
+            type="password"
+            name="password2"
+            id="password2"
+            placeholder="Confirmar Senha"
+          />
+        </div>
+        <button type="button" class="add-button" (click)="add(username.value,userEmail.value, Genero.value, password.value );
+        ">
+         Cadastrar
+       </button>
+      </div>
+    
+    </form>
+  </body>
+</html>
