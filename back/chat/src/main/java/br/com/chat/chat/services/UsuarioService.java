@@ -50,4 +50,9 @@ public class UsuarioService {
         Optional<Usuario> obj = repository.findByEmail(email); 
         return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! Email: " + email + ", Tipo"+ UsuarioService.class.getName()));
     }
+    
+    public Usuario findByEmailAndPassword(String email, String password) {
+        Usuario obj = repository.findByEmailAndPassword(email, password); 
+        return obj;
+    }
 }
