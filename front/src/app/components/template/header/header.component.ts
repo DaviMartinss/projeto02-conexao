@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../../../login.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  username: string = '';
+  password: string = '';
+
+  constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
+  }
+
+  login(){
+    console.log('login - ' + this.username + ':' + this.password);
+
+    this.loginService.login(this.username, this.password)
+
+
   }
 
 }
